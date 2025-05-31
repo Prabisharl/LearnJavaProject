@@ -1,0 +1,2 @@
+Writing firstline using PrintWriter
+Writing secondline using PrintWriter
