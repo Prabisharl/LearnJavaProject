@@ -1,5 +1,9 @@
 package org14.example.filehandling.writer;
 import java.io.FileWriter;
+import java.io.RandomAccessFile;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+
 public class WriteFileByFileWriter {
     public static void main(String[] args) {
         String dataInFile ="This is a test file for writing something to a already created file";
@@ -16,6 +20,35 @@ public class WriteFileByFileWriter {
             fw.close();
         }catch(Exception e){
            e.printStackTrace();
+        }
+    }
+
+    public static class WriteToFileChannel {
+
+        public static void main(String[] args) {
+            try {
+                // Open file in read-write mode
+                RandomAccessFile file = new RandomAccessFile("file.txt", "rw");
+                FileChannel channel = file.getChannel();
+
+                // Allocate buffer and put data
+                ByteBuffer buffer = ByteBuffer.allocate(64);
+                buffer.put("Hello NIO".getBytes());
+
+                // Flip buffer to prepare for writing
+                buffer.flip();
+
+                // Write buffer to channel (file)
+                channel.write(buffer);
+
+                // Close file (and channel)
+                file.close();
+
+                System.out.println("Data written to file.txt");
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 }

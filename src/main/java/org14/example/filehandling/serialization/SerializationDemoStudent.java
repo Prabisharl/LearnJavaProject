@@ -2,7 +2,7 @@ package org14.example.filehandling.serialization;
 
 import java.io.*;
 
-public class SerializationDemo {
+public class SerializationDemoStudent {
     public static void main(String[] args) {
         try {
 

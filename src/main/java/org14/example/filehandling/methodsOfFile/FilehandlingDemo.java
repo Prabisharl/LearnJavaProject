@@ -18,7 +18,7 @@ public class FilehandlingDemo {
 
 
 
-        File obj3=new File("comm.project.filehandling2");
+        File obj3=new File("com.project.filehandling2");
         String packagename="comm.project.filehandling2";
         boolean success=obj3.mkdir();
         if (success) {

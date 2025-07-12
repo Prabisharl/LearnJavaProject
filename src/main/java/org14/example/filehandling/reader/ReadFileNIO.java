@@ -6,9 +6,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
-import java.util.Scanner;
 
-public class ReadFile {
+public class ReadFileNIO {
     public static void main(String[] args) {
         File f = new File("P:/GitRepo/LearnJavaProject/files/file1.txt");
         File f2 = new File("P:/GitRepo/LearnJavaProject/files/file10.txt");//String format

@@ -5,7 +5,7 @@ import java.io.IOException;
 public class CreateFileDemo {
     public static void main(String[] args) {
         //created file in this current directory in f1 object
-        File f1=new File("Samplefile1.txt");//it simply represents a representation of file or path.So there is no need to handle exception at this point.
+        File f1=new File("Samplefile2.txt");//it simply represents a representation of file or path.So there is no need to handle exception at this point.
 
         try{
             boolean status=f1.createNewFile();

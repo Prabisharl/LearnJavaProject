@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
-public class DeserializationDemo {
+public class DeserializationDemoStudent {
     public static void main(String[] args) {
         try{
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream("P:/GitRepo/LearnJavaProject/files/f.txt"));
